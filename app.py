@@ -23,8 +23,6 @@ page_url = 'http://books.toscrape.com/'
 parser = BooksPageParser(page_url, BooksLocator.BOOKS, BookParser)
 books_list = parser.get_items_sync()
 
-print(f'books list size (initial request) = {len(books_list)}')
-
 
 # fetch single book page
 async def fetch_books_page(session: aiohttp.client, page_link):
